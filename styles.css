@@ -11,7 +11,40 @@
 html, body {
     box-sizing: border-box;
     margin: 0;
-    
+    height: 100%;
 }
 
-/* .container */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    height: 100%;
+}
+
+.nav_dashboard {
+    grid-column: 1 / 2;
+    grid-row: 1 / 8;
+}
+
+.header {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+}
+
+.contents {
+    grid-column: 2 / 3;
+    grid-row: 2 / 8;
+}
+
+.announcements {
+    grid-column: 3 / 4;
+    grid-row: 2 / 5;
+}
+
+.trending {
+    grid-column: 3 / 4;
+    grid-row: 5 / 8;
+}
+.nav_dashboard, .header, .contents, .announcements, .trending {
+    border: 1px solid var(--secondary-color);
+}
